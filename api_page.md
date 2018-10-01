@@ -1,7 +1,7 @@
 
 # __ADA API__
 
-##DOC LIST##
+## DOC LIST
 * [ADA API](/fit_ada?pass=fitadavmfhwprxm!1)
 
 *<strong>서버 to 클라이어트 결과</strong>*
@@ -82,9 +82,9 @@
 * * * * *
 
 
-##Account <a id="Account" href="#Account">¶</a>
+## Account <a id="Account" href="#Account">¶</a>
 
-###1. 회원가입 [/ada/account/join] / POST <a id="/ada/account/join" href="#/ada/account/join">¶</a>
+### 1. 회원가입 [/ada/account/join] / POST <a id="/ada/account/join" href="#/ada/account/join">¶</a>
 
 *info*
 
@@ -141,7 +141,7 @@
     ? : 정리중
 
 
-###2. 로그인 [/ada/account/login] / POST <a id="/ada/account/login" href="#/ada/account/login">¶</a>
+### 2. 로그인 [/ada/account/login] / POST <a id="/ada/account/login" href="#/ada/account/login">¶</a>
 
 *info*
 
@@ -198,7 +198,7 @@
     0 : 성공　
     ? : 정리중
 
-###3. 계정정보 가져오기 [/ada/account/getInfo] / POST <a id="/ada/account/getInfo" href="#/ada/account/getInfo">¶</a>
+### 3. 계정정보 가져오기 [/ada/account/getInfo] / POST <a id="/ada/account/getInfo" href="#/ada/account/getInfo">¶</a>
 
 *info*
 
@@ -261,7 +261,7 @@
 
 ##Boutique <a id="Boutique" href="#Boutique">¶</a>
 
-###1. 카테고리 리스트(브랜드 카테고리 리스트) [/ada/boutique/categoryList] / POST <a id="/ada/boutique/categoryList" href="#/ada/boutique/categoryList">¶</a>
+### 1. 카테고리 리스트(브랜드 카테고리 리스트) [/ada/boutique/categoryList] / POST <a id="/ada/boutique/categoryList" href="#/ada/boutique/categoryList">¶</a>
 
 *info*
 
@@ -325,7 +325,7 @@
     0 : 성공　
     ? : 정리중
 
-###2. 브랜드 리스트 [/ada/boutique/brandList] / POST <a id="/ada/boutique/brandList" href="#/ada/boutique/brandList">¶</a>
+### 2. 브랜드 리스트 [/ada/boutique/brandList] / POST <a id="/ada/boutique/brandList" href="#/ada/boutique/brandList">¶</a>
 
 *info*
 
@@ -391,7 +391,7 @@
     0 : 성공　
     ? : 정리중
 
-###3. 브랜드 디테일 [/ada/boutique/brandDetail] / POST <a id="/ada/boutique/brandDetail" href="#/ada/boutique/brandDetail">¶</a>
+### 3. 브랜드 디테일 [/ada/boutique/brandDetail] / POST <a id="/ada/boutique/brandDetail" href="#/ada/boutique/brandDetail">¶</a>
 
 *info*
 
@@ -454,7 +454,7 @@
     ? : 정리중
 
 
-###4. 배너 리스트 [/ada/boutique/bannerList] / POST <a id="/ada/boutique/bannerList" href="#/ada/boutique/bannerList">¶</a>
+### 4. 배너 리스트 [/ada/boutique/bannerList] / POST <a id="/ada/boutique/bannerList" href="#/ada/boutique/bannerList">¶</a>
 
 *info*
 
@@ -523,7 +523,7 @@
        ? : 정리중
 
 
-###5. 상품 리스트 [/ada/boutique/productList] / POST <a id="/ada/boutique/productList" href="#/ada/boutique/productList">¶</a>
+### 5. 상품 리스트 [/ada/boutique/productList] / POST <a id="/ada/boutique/productList" href="#/ada/boutique/productList">¶</a>
 
 *info*
 
@@ -602,7 +602,7 @@
     0 : 성공　
     ? : 정리중
 
-###6. 상품 상세 보기 [/ada/boutique/productDetail] / POST <a id="/ada/boutique/productDetail" href="#/ada/boutique/productDetail">¶</a>
+### 6. 상품 상세 보기 [/ada/boutique/productDetail] / POST <a id="/ada/boutique/productDetail" href="#/ada/boutique/productDetail">¶</a>
 
 *info*
 
@@ -757,7 +757,7 @@
     0 : 성공　
     ? : 정리중
 
-###7. 피쳐드 리스트 [/ada/boutique/featuredList] / POST <a id="/ada/boutique/featuredList" href="#/ada/boutique/featuredList">¶</a>
+### 7. 피쳐드 리스트 [/ada/boutique/featuredList] / POST <a id="/ada/boutique/featuredList" href="#/ada/boutique/featuredList">¶</a>
 
 *info*
 
@@ -816,7 +816,7 @@
     0 : 성공　
     ? : 정리중
 
-###8. 피쳐드 디테일 [/ada/boutique/featuredDetail] / POST <a id="/ada/boutique/featuredDetail" href="#/ada/boutique/featuredDetail">¶</a>
+### 8. 피쳐드 디테일 [/ada/boutique/featuredDetail] / POST <a id="/ada/boutique/featuredDetail" href="#/ada/boutique/featuredDetail">¶</a>
 
 *info*
 
@@ -855,7 +855,7 @@
     0 : 성공　
     ? : 정리중
 
-###9. 컨텐츠 뷰어 [/ada/boutique/contentsView] / POST <a id="/ada/boutique/contentsView" href="#/ada/boutique/contentsView">¶</a>
+### 9. 컨텐츠 뷰어 [/ada/boutique/contentsView] / POST <a id="/ada/boutique/contentsView" href="#/ada/boutique/contentsView">¶</a>
 
 *info*
 
@@ -894,7 +894,7 @@
 
 
 
-###10. 태그 리스트 [/ada/boutique/tagList] / POST <a id="/ada/boutique/tagList" href="#/ada/boutique/tagList">¶</a>
+### 10. 태그 리스트 [/ada/boutique/tagList] / POST <a id="/ada/boutique/tagList" href="#/ada/boutique/tagList">¶</a>
 
 *info*
 
@@ -963,9 +963,9 @@
 
 
 
-##Wish <a id="Wish" href="#Wish">¶</a>
+## Wish <a id="Wish" href="#Wish">¶</a>
 
-###1. 위시 등록/삭제 [/ada/wish/edit] / POST <a id="/ada/wish/edit" href="#/ada/wish/edit">¶</a>
+### 1. 위시 등록/삭제 [/ada/wish/edit] / POST <a id="/ada/wish/edit" href="#/ada/wish/edit">¶</a>
 
 *info*
 
@@ -1007,7 +1007,7 @@
     ? : 정리중
 
 
-###2. 위시 리스트 보기 [/ada/wish/list] / POST <a id="/ada/wish/list" href="#/ada/wish/list">¶</a>
+### 2. 위시 리스트 보기 [/ada/wish/list] / POST <a id="/ada/wish/list" href="#/ada/wish/list">¶</a>
 
 *info*
 
@@ -1078,7 +1078,7 @@
     ? : 정리중
 
 
-###3. like 등록/삭제 [/ada/like/edit] / POST <a id="/ada/like/edit" href="#/ada/like/edit">¶</a>
+### 3. like 등록/삭제 [/ada/like/edit] / POST <a id="/ada/like/edit" href="#/ada/like/edit">¶</a>
 
 *info*
 
@@ -1122,9 +1122,9 @@
     ? : 정리중
 
 
-##Cart <a id="Cart" href="#Cart">¶</a>
+## Cart <a id="Cart" href="#Cart">¶</a>
 
-###1. 장바구니 등록/구매처리 [/ada/cart/edit] / POST <a id="/ada/cart/edit" href="#/ada/cart/edit">¶</a>
+### 1. 장바구니 등록/구매처리 [/ada/cart/edit] / POST <a id="/ada/cart/edit" href="#/ada/cart/edit">¶</a>
 
 *info*
 
@@ -1213,7 +1213,7 @@
     0 : 성공　
     ? : 정리중
 
-###2. 장바구니/구매 리스트 [/ada/cart/list] / POST <a id="/ada/cart/list" href="#/ada/cart/list">¶</a>
+### 2. 장바구니/구매 리스트 [/ada/cart/list] / POST <a id="/ada/cart/list" href="#/ada/cart/list">¶</a>
 
 *info*
 
@@ -1293,7 +1293,7 @@
     0 : 성공　
     ? : 정리중
 
-###3. 장바구니 삭제처리 [/ada/cart/delete] / POST <a id="/ada/cart/delete" href="#/ada/cart/delete">¶</a>
+### 3. 장바구니 삭제처리 [/ada/cart/delete] / POST <a id="/ada/cart/delete" href="#/ada/cart/delete">¶</a>
 
 *info*
 
@@ -1362,7 +1362,7 @@
     0 : 성공　
     ? : 정리중
 
-###4. 장바구니 전체구매 [/ada/cart/buyAll] / POST <a id="/ada/cart/buyAll" href="#/ada/cart/buyAll">¶</a>
+### 4. 장바구니 전체구매 [/ada/cart/buyAll] / POST <a id="/ada/cart/buyAll" href="#/ada/cart/buyAll">¶</a>
 
 *info*
 
@@ -1431,9 +1431,9 @@
     0 : 성공　
     ? : 정리중
 
-##Card <a id="Card" href="#Card">¶</a>
+## Card <a id="Card" href="#Card">¶</a>
 
-###1. 프레임 리스트 [/ada/card/frameList] / POST <a id="/ada/card/frameList" href="#/ada/card/frameList">¶</a>
+### 1. 프레임 리스트 [/ada/card/frameList] / POST <a id="/ada/card/frameList" href="#/ada/card/frameList">¶</a>
 
 *info*
 
@@ -1509,7 +1509,7 @@
 
 
 
-###2. 카드 리스트 [/ada/card/cardList] / POST <a id="/ada/card/cardList" href="#/ada/card/cardList">¶</a>
+### 2. 카드 리스트 [/ada/card/cardList] / POST <a id="/ada/card/cardList" href="#/ada/card/cardList">¶</a>
 
 *info*
 
@@ -1752,7 +1752,7 @@
     ? : 정리중
 
 
-###3. 좋아요 처리 [/ada/card/like] / POST <a id="/ada/card/like" href="#/ada/card/like">¶</a>
+### 3. 좋아요 처리 [/ada/card/like] / POST <a id="/ada/card/like" href="#/ada/card/like">¶</a>
 
 *info*
 
@@ -1795,7 +1795,7 @@
     ? : 정리중
 
 
-###4. 별점 처리 [/ada/card/star] / POST <a id="/ada/card/star" href="#/ada/card/star">¶</a>
+### 4. 별점 처리 [/ada/card/star] / POST <a id="/ada/card/star" href="#/ada/card/star">¶</a>
 
 *info*
 
@@ -1836,7 +1836,7 @@
     0 : 성공　
     ? : 정리중
 
-###5. 버튼 처리 [/ada/card/button] / POST <a id="/ada/card/button" href="#/ada/card/button">¶</a>
+### 5. 버튼 처리 [/ada/card/button] / POST <a id="/ada/card/button" href="#/ada/card/button">¶</a>
 
 *info*
 
@@ -1885,10 +1885,10 @@
     0 : 성공　
     ? : 정리중
 
-##Etc <a id="etc" href="#etc">¶</a>
+## Etc <a id="etc" href="#etc">¶</a>
 
 
-###1. 통신테스트 [/ada/etc/test] / POST <a id="/ada/etc/test" href="#/ada/etc/test">¶</a>
+### 1. 통신테스트 [/ada/etc/test] / POST <a id="/ada/etc/test" href="#/ada/etc/test">¶</a>
 
 *info*
 
