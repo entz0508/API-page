@@ -69,9 +69,9 @@
 [Card](#Card) -- API Mockup
     1. 프레임 리스트 - [/ada/card/frameList](#/ada/card/frameList) - POST, 작업 중
     2. 카드 리스트 - [/ada/card/cardList](#/ada/card/cardList) - POST, 작업 중
-    3. 좋아요
-    4. 별점
-    5. 버튼
+    3. 좋아요 - [/ada/card/like](#/ada/card/like) - POST, 작업 중
+    4. 별점 - [/ada/card/star](#/ada/card/star) - POST, 작업 중
+    5. 버튼 - [/ada/card/button](#/ada/card/button) - POST, 작업 중
 
 [ETC](#Etc)
     1. api서버 통신테스트 - [/ada/etc/test](#/ada/etc/test) - POST ,완료.
@@ -1439,7 +1439,7 @@
 
     기능 : ADA 컨텐츠 카드 시스템의 프레임 리스트를 노출
     수정예정 : 입력 파라미터가 추가 될 수 있음. 
-    
+
 *parameter*
 
     client_uid : string                     // 필수, 디바이스 UID
@@ -1537,6 +1537,15 @@
     "res": 0,
     "msg": "search success",
     "data": {
+        "card": {
+            "id": int,
+            "name": string,
+            "frameID": int
+        },
+        "category": {
+            "id": string,
+            "name": int
+        },
         "component1": [
                 ("type" = 1)
             {
@@ -1743,6 +1752,138 @@
     ? : 정리중
 
 
+###3. 좋아요 처리 [/ada/card/like] / POST <a id="/ada/card/like" href="#/ada/card/like">¶</a>
+
+*info*
+
+    기능 : ADA 컨텐츠 카드 시스템의 프레임 리스트를 노출
+    수정예정 : 입력 파라미터가 추가 될 수 있음. 
+    
+*parameter*
+
+    client_uid : string                     // 필수, 디바이스 UID
+    os : string                             // 필수, OS : enum(ios/android/web)
+    access_token : string                   // 필수  access token
+    - 이하 contents var - 
+    card_id : int                           // CARD ID
+    liked : int                             // 좋아요 선택 : 1 / 미 선택 : 0
+
+    
+*return value*
+
+    // 성공
+    {
+        "res": 0,
+        "msg": "search success",
+        "data": {
+            "cardID": int,                  // CARD ID
+            "liked": int,                   // 좋아요 선택 여부
+            "likeCount": int                // 좋아요 카운트
+        }
+    }
+
+    //실패
+    {
+        "res": int,                                                                 // 0 이 아닌 값,
+        "msg": string.					// 오류 메세지
+        "data": null
+    }
+
+*res*
+
+    0 : 성공　
+    ? : 정리중
+
+
+###4. 별점 처리 [/ada/card/star] / POST <a id="/ada/card/star" href="#/ada/card/star">¶</a>
+
+*info*
+
+    기능 : ADA 컨텐츠 카드 시스템의 프레임 리스트를 노출
+    수정예정 : 입력 파라미터가 추가 될 수 있음. 
+    
+*parameter*
+
+    client_uid : string                     // 필수, 디바이스 UID
+    os : string                             // 필수, OS : enum(ios/android/web)
+    access_token : string                   // 필수  access token
+    - 이하 contents var - 
+    card_id : int                           // CARD ID
+    star_val : int                          // STAR n (0 ~ n)
+
+    
+*return value*
+
+    // 성공
+    {
+        "res": 0,
+        "msg": "search success",
+        "data": {
+            "cardID": int,                  // CARD ID
+            "starVal": int                  // 입력한 별점
+        }
+    }
+
+    //실패
+    {
+        "res": int,                                                                 // 0 이 아닌 값,
+        "msg": string.					// 오류 메세지
+        "data": null
+    }
+
+*res*
+
+    0 : 성공　
+    ? : 정리중
+
+###5. 버튼 처리 [/ada/card/button] / POST <a id="/ada/card/button" href="#/ada/card/button">¶</a>
+
+*info*
+
+    기능 : ADA 컨텐츠 카드 시스템의 프레임 리스트를 노출
+    수정예정 : 입력 파라미터가 추가 될 수 있음. 
+    
+*parameter*
+
+    client_uid : string                     // 필수, 디바이스 UID
+    os : string                             // 필수, OS : enum(ios/android/web)
+    access_token : string                   // 필수  access token
+    - 이하 contents var - 
+    card_id : int                           // CARD ID 
+    button_val : int                        // 선택한 버튼 값 (0 ~ n)
+
+    
+*return value*
+
+    // 성공
+    {
+    "res": 0,
+    "msg": "search success",
+    "data": {
+        "cardID": int,                      // CARD ID
+        "buttonVal": int,                   // 선택한 버튼 값
+        "buttonList": [
+            {
+                "label": string,              // 버튼 라벨
+                "count": int,                 // 버튼 갯수
+                "selected": int               // 선택한 버튼 (선택 : 1 / else : 0)
+            },
+            ... 반복
+        ]
+    }
+}
+
+    //실패
+    {
+        "res": int,                                                                 // 0 이 아닌 값,
+        "msg": string.					// 오류 메세지
+        "data": null
+    }
+
+*res*
+
+    0 : 성공　
+    ? : 정리중
 
 ##Etc <a id="etc" href="#etc">¶</a>
 
