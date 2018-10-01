@@ -35,7 +35,7 @@
 *<strong>API 목록</strong>*
 
 [Account](#Account)
-    1. 회원가입 - [/ada/account/join](#/ada/account/join) - POST, 작업 완료.
+    1. 회원가입 - [/ada/account/join](#/ada/account/join) - POST, 작업 완료.<br>
     2. 로그인 - [/ada/account/login](#/ada/account/login) - POST, 작업 완료.
     3. 계정정보 가져오기 - [/ada/account/getInfo](#/ada/account/getInfo) - POST, 작업 완료.
    
