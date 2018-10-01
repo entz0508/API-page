@@ -40,45 +40,45 @@
     3. 계정정보 가져오기 - [/ada/account/getInfo](#/ada/account/getInfo) - POST, 작업 완료.<br>
    
 [Boutique](#Boutique)<br>
-    1. 카테고리 리스트(브랜드 카테고리 리스트) - [/ada/boutique/categoryList](#/ada/boutique/categoryList) - POST , 작업 완료.
-    2. 브랜드 리스트 - [/ada/boutique/brandList](#/ada/boutique/brandList) - POST , 작업 완료.
-    3. 브랜드 디테일 - [/ada/boutique/brandDetail](#/ada/boutique/brandDetail) - POST , 작업 완료.
-    4. 배너 리스트 - [/ada/boutique/bannerList](#/ada/boutique/bannerList) - POST, 작업 완료.
-    5. 상품 리스트 - [/ada/boutique/productList](#/ada/boutique/productList) - POST, 작업 완료.
-    6. 상품 상세보기 - [/ada/boutique/productDetail](/ada/boutique/productDetail) - POST, 작업 완료.
-    7. 피쳐드 리스트 - [/ada/boutique/featuredList](#/ada/boutique/featuredList) - POST, 작업 완료.
-    8. 피쳐드 디테일 - [/ada/boutique/featuredDetail](#/ada/boutique/featuredDetail) - POST, 작업 완료.
-    9. 컨텐츠 뷰어 - [/ada/boutique/contentsView](#/ada/boutique/contentsView) - POST , 작업 완료.
-    10. 태그 리스트 - [/ada/boutique/tagList](#/ada/boutique/tagList)  - POST, 작업 완료
+    1. 카테고리 리스트(브랜드 카테고리 리스트) - [/ada/boutique/categoryList](#/ada/boutique/categoryList) - POST , 작업 완료.<br>
+    2. 브랜드 리스트 - [/ada/boutique/brandList](#/ada/boutique/brandList) - POST , 작업 완료.<br>
+    3. 브랜드 디테일 - [/ada/boutique/brandDetail](#/ada/boutique/brandDetail) - POST , 작업 완료.<br>
+    4. 배너 리스트 - [/ada/boutique/bannerList](#/ada/boutique/bannerList) - POST, 작업 완료.<br>
+    5. 상품 리스트 - [/ada/boutique/productList](#/ada/boutique/productList) - POST, 작업 완료.<br>
+    6. 상품 상세보기 - [/ada/boutique/productDetail](/ada/boutique/productDetail) - POST, 작업 완료.<br>
+    7. 피쳐드 리스트 - [/ada/boutique/featuredList](#/ada/boutique/featuredList) - POST, 작업 완료.<br>
+    8. 피쳐드 디테일 - [/ada/boutique/featuredDetail](#/ada/boutique/featuredDetail) - POST, 작업 완료.<br>
+    9. 컨텐츠 뷰어 - [/ada/boutique/contentsView](#/ada/boutique/contentsView) - POST , 작업 완료.<br>
+    10. 태그 리스트 - [/ada/boutique/tagList](#/ada/boutique/tagList)  - POST, 작업 완료<br>
 
-[Wish](#Wish)
-    1. wish 등록/삭제 - [/ada/wish/edit](#/ada/wish/edit) - POST, 작업 완료.
-    2. wish 리스트 - [/ada/wish/list](#/ada/wish/list) - POST, 작업 완료.
-    3. like 등록/삭제 - [/ada/like/edit](#/ada/like/edit) - POST, 작업 완료.
+[Wish](#Wish)<br>
+    1. wish 등록/삭제 - [/ada/wish/edit](#/ada/wish/edit) - POST, 작업 완료.<br>
+    2. wish 리스트 - [/ada/wish/list](#/ada/wish/list) - POST, 작업 완료.<br>
+    3. like 등록/삭제 - [/ada/like/edit](#/ada/like/edit) - POST, 작업 완료.<br>
 
 [Cart](#Cart)
-    1. 장바구니 등록/구매처리 - [/ada/cart/edit](#/ada/cart/edit) - POST, 작업 완료.
-    2. 장바구니/구매 리스트 - [/ada/cart/list](#/ada/cart/list) - POST, 작업 완료.
-    3. 장바구니 삭제 처리 - [/ada/cart/delete](#/ada/cart/delete) - POST, 작업 예정
-    4. 장바구니 전체 구매 - [/ada/cart/buyAll](#/ada/cart/buyAll) - POST, 작업 예정
+    1. 장바구니 등록/구매처리 - [/ada/cart/edit](#/ada/cart/edit) - POST, 작업 완료.<br>
+    2. 장바구니/구매 리스트 - [/ada/cart/list](#/ada/cart/list) - POST, 작업 완료.<br>
+    3. 장바구니 삭제 처리 - [/ada/cart/delete](#/ada/cart/delete) - POST, 작업 예정<br>
+    4. 장바구니 전체 구매 - [/ada/cart/buyAll](#/ada/cart/buyAll) - POST, 작업 예정<br>
 
-[Wardrobe](#Wardrobe)
-    1. 옷장 리스트 - [/ada/wardrobe/list](#/ada/wardrobe/list) - 상위 구매리스트와 상동.
-    2. 아이템 착용 / 해제 - [/ada/wardrobe/wear](#/ada/wardrobe/wear) - 추후 작업 예정 - 1
+[Wardrobe](#Wardrobe)<br>
+    1. 옷장 리스트 - [/ada/wardrobe/list](#/ada/wardrobe/list) - 상위 구매리스트와 상동.<br>
+    2. 아이템 착용 / 해제 - [/ada/wardrobe/wear](#/ada/wardrobe/wear) - 추후 작업 예정 - 1<br>
 
-[Card](#Card) -- API Mockup
-    1. 프레임 리스트 - [/ada/card/frameList](#/ada/card/frameList) - POST, 작업 중
-    2. 카드 리스트 - [/ada/card/cardList](#/ada/card/cardList) - POST, 작업 중
-    3. 좋아요 - [/ada/card/like](#/ada/card/like) - POST, 작업 중
-    4. 별점 - [/ada/card/star](#/ada/card/star) - POST, 작업 중
-    5. 버튼 - [/ada/card/button](#/ada/card/button) - POST, 작업 중
+[Card](#Card) -- API Mockup<br>
+    1. 프레임 리스트 - [/ada/card/frameList](#/ada/card/frameList) - POST, 작업 중<br>
+    2. 카드 리스트 - [/ada/card/cardList](#/ada/card/cardList) - POST, 작업 중<br>
+    3. 좋아요 - [/ada/card/like](#/ada/card/like) - POST, 작업 중<br>
+    4. 별점 - [/ada/card/star](#/ada/card/star) - POST, 작업 중<br>
+    5. 버튼 - [/ada/card/button](#/ada/card/button) - POST, 작업 중<br>
 
-[ETC](#Etc)
-    1. api서버 통신테스트 - [/ada/etc/test](#/ada/etc/test) - POST ,완료.
+[ETC](#Etc)<br>
+    1. api서버 통신테스트 - [/ada/etc/test](#/ada/etc/test) - POST ,완료.<br>
 
      
     
-[ERROR CODE](#errorCode)
+[ERROR CODE](#errorCode)<br>
 * * * * *
 
 
