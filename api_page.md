@@ -1,7 +1,7 @@
 
-## __ADA API__
+# __ADA API__
 
-*DOC LIST*
+##DOC LIST##
 * [ADA API](/fit_ada?pass=fitadavmfhwprxm!1)
 
 *<strong>서버 to 클라이어트 결과</strong>*
@@ -18,12 +18,12 @@
 		매처리시 토큰을 같이 보내고. 이를 유져의 키값으로 인증한다.
 		다른 디바이스를 이용해서 로그인시 토큰을 신규 생성한다.
 	4. 회원가입시 공통 체크
-		clientUID                   length:0~64, 기기고유코드
-		os                            enum('android','ios','web')
+		clientUID                length:0~64, 기기고유코드
+		os                       enum('android','ios','web')
 		accessToken              not null, length:40
 	5. 로그인인증시 공통 체크
-		clientUID                   length:0~64, 기기고유코드
-		os                            enum('android','ios','web')
+		clientUID                length:0~64, 기기고유코드
+		os                       enum('android','ios','web')
 		accessToken              not null, length:40
 
 
@@ -35,7 +35,7 @@
 *<strong>API 목록</strong>*
 
 [Account](#Account)
-    1. 회원가입 - [/ada/account/join](#/ada/account/join) - POST, 작업 완료.<br>
+    1. 회원가입 - [/ada/account/join](#/ada/account/join) - POST, 작업 완료.
     2. 로그인 - [/ada/account/login](#/ada/account/login) - POST, 작업 완료.
     3. 계정정보 가져오기 - [/ada/account/getInfo](#/ada/account/getInfo) - POST, 작업 완료.
    
