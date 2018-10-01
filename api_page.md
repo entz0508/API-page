@@ -34,12 +34,12 @@
 
 *<strong>API 목록</strong>*
 
-[Account](#Account)
-    1. 회원가입 - [/ada/account/join](#/ada/account/join) - POST, 작업 완료.
-    2. 로그인 - [/ada/account/login](#/ada/account/login) - POST, 작업 완료.
-    3. 계정정보 가져오기 - [/ada/account/getInfo](#/ada/account/getInfo) - POST, 작업 완료.
+[Account](#Account)<br>
+    1. 회원가입 - [/ada/account/join](#/ada/account/join) - POST, 작업 완료.<br>
+    2. 로그인 - [/ada/account/login](#/ada/account/login) - POST, 작업 완료.<br>
+    3. 계정정보 가져오기 - [/ada/account/getInfo](#/ada/account/getInfo) - POST, 작업 완료.<br>
    
-[Boutique](#Boutique)
+[Boutique](#Boutique)<br>
     1. 카테고리 리스트(브랜드 카테고리 리스트) - [/ada/boutique/categoryList](#/ada/boutique/categoryList) - POST , 작업 완료.
     2. 브랜드 리스트 - [/ada/boutique/brandList](#/ada/boutique/brandList) - POST , 작업 완료.
     3. 브랜드 디테일 - [/ada/boutique/brandDetail](#/ada/boutique/brandDetail) - POST , 작업 완료.
