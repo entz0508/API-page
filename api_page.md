@@ -80,7 +80,7 @@
 
 ## Account <a id="Account" href="#Account">¶</a>
 
-### 1. 회원가입 [</ada/account/join>] / POST <a id="/ada/account/join" href="#/ada/account/join">¶</a>
+### 1. 회원가입 [/ada/account/join] / POST <a id="/ada/account/join" href="#/ada/account/join">¶</a>
 
 *info*
     기능 : ADA 회원가입
