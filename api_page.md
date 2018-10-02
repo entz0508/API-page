@@ -1,8 +1,6 @@
 
 # __ADA API__
 
-## DOC LIST
-* [ADA API](/fit_ada?pass=fitadavmfhwprxm!1)
 
 *<strong>서버 to 클라이어트 결과</strong>*
 
@@ -82,7 +80,7 @@
 
 ## Account <a id="Account" href="#Account">¶</a>
 
-### 1. 회원가입 [/ada/account/join] / POST <a id="/ada/account/join" href="#/ada/account/join">¶</a>
+### 1. 회원가입 [</ada/account/join>] / POST <a id="/ada/account/join" href="#/ada/account/join">¶</a>
 
 *info*
     기능 : ADA 회원가입
@@ -155,11 +153,11 @@
         signup_id : string              // 가입 경로의 유져ID(sns user Key) 또는 guest 일 경우 client_id 값
 
 *return value*
->
->    // 성공
->    {
->    "res": 0,
->    "data": {
+
+    // 성공
+    {
+    "res": 0,
+    "data": {
         "userInfo": {
             "accountID": 100000112,
             "accessToken": "454ab6a16cafb992fed6f50dd7fb4a7a5c907835",
@@ -191,7 +189,7 @@
         "data": null
     }
 
-* res
+*res*
 
     0 : 성공　
     ? : 정리중
