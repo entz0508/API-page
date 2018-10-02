@@ -84,13 +84,13 @@
 
 ### 1. 회원가입 [/ada/account/join] / POST <a id="/ada/account/join" href="#/ada/account/join">¶</a>
 
-* info
-    + 기능 : ADA 회원가입
-    + 수정예정 : 입력 파라미터가 추가 될 수 있음. 출력 결과 값의 개인정보 노출 부분이 변경 될 수 있음.
-    + 확인사항 : signup_id 값 중복 불가.
+*info*
+    기능 : ADA 회원가입
+    수정예정 : 입력 파라미터가 추가 될 수 있음. 출력 결과 값의 개인정보 노출 부분이 변경 될 수 있음.
+    확인사항 : signup_id 값 중복 불가.
 
 
-* parameter
+*parameter*
 
         client_uid : string				// 필수, 디바이스 UID
         os : string						// 필수, OS : enum(ios/android/web)
@@ -112,7 +112,7 @@
         bottom : int                    // 하체(0~10) ex. 0
         shoes : int                     // 신발 타입(0~10) ex. 0
 
-* return value
+*return value*
 
     // 성공
     {
@@ -132,7 +132,7 @@
         "data": null
     }
 
-* res
+*res*
 
     0 : 성공　
     ? : 정리중
@@ -140,13 +140,13 @@
 
 ### 2. 로그인 [/ada/account/login] / POST <a id="/ada/account/login" href="#/ada/account/login">¶</a>
 
-* info
+*inf*o
 
     기능 : ADA 회원 로그인 이후 유저 계정 정보를 리턴 값으로 노출
     수정예정 : 입력 파라미터가 추가 될 수 있음. 출력 결과 값의 개인정보 노출 부분이 변경 될 수 있음. 
 
 
-* parameter
+*parameter*
 
         client_uid : string				// 필수, 디바이스 UID
         os : string						// 필수, OS : enum(ios/android/web)
@@ -154,7 +154,7 @@
         signup_path : string            // 가입 경로 enum('google','facebook','guest')
         signup_id : string              // 가입 경로의 유져ID(sns user Key) 또는 guest 일 경우 client_id 값
 
-* return value
+*return value*
 >
 >    // 성공
 >    {
