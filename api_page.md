@@ -145,7 +145,6 @@
     기능 : ADA 회원 로그인 이후 유저 계정 정보를 리턴 값으로 노출
     수정예정 : 입력 파라미터가 추가 될 수 있음. 출력 결과 값의 개인정보 노출 부분이 변경 될 수 있음. 
 
-> This 
 
 * parameter
 
@@ -156,11 +155,11 @@
         signup_id : string              // 가입 경로의 유져ID(sns user Key) 또는 guest 일 경우 client_id 값
 
 * return value
-
-    // 성공
-    {
-    "res": 0,
-    "data": {
+>
+>    // 성공
+>    {
+>    "res": 0,
+>    "data": {
         "userInfo": {
             "accountID": 100000112,
             "accessToken": "454ab6a16cafb992fed6f50dd7fb4a7a5c907835",
@@ -184,6 +183,7 @@
     }
 }
 
+>
     //실패
     {
         "res": int,                                                                 // 0 이 아닌 값,
