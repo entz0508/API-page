@@ -1535,207 +1535,211 @@
     "res": 0,
     "msg": "search success",
     "data": {
-        "card": {
-            "id": int,
-            "name": string,
-            "frameID": int
-        },
-        "category": {
-            "id": string,
-            "name": int
-        },
-        "component1": [
-                ("type" = 1)
-            {
-                "type": int,                    // 컴포넌트 1 의 타입 값 - 미 사용 : 0 / 텍스트 메세지 : 1 / 프로필타입1 : 2
-                "txtOBJ": {
-                    "txt": string,              // 텍스트
-                    "align": int,               // 정렬 - 미사용 : 0 / 좌측정렬 : 1 / 우측정렬 : 2 / 가운데정렬 : 3
-                    "color": string,            // RGB코드
-                    "size": int                 // 크기(pt)
-                }
-            }
-                ("type" = 2)
-            {
-                "profileOBJ": {
-                    "profileImage": string,     // 이미지 URL
-                    "nickName": string,         // 닉네임
-                    "accountID": string         // 아이디
-                }
-            }
-        ],                              
-        "component2": [
-                ("type" = 1)
-            {
-                "type": int,                    // 컴포넌트 2 의 타입 값 - 미 사용 : 0 / 코인 정보 : 1 / 뱃지 출력 (hot : 3 / new : 4 / sale : 5)
-                "timeOBJ": {                    // 시간 정보
-                    "time": string              // 시간 
-                }
-            }
-                ("type" = 2)
-            {
-                "coinOBJ": {                    // 코인정보
-                    "coinImg": string,          // 코인 이미지 URL
-                    "coinCnt": string           // 코인 값 string
-                }
-            }
-                ("type" = 3)
-            {
-                "badgeOBJ": {                   // 뱃지 정보
-                    "hot": int                  // 미사용 : 0 사용 : 1
-                }
-            }
-                ("type" = 4)
-            {
-                "badgeOBJ": {
-                    "new": int
-                }
-            }
-                ("type" = 5)
-            {
-                "badgeOBJ": {
-                    "sale": int
-                }
-            }
-        ],                                
-        "component3": {
-                ("type" = 1)
-            "type": int,                         // 컴포넌트 3 의 타입 값 - 미 사용 : 0 / 이미지 : 1 / 동영상 : 2 / 상품 : 3 / 갤러리 : 4 / 유저 : 5 
-            "imageOBJ": {                        // 이미지 정보
-                "imageURL": string,              // 이미지 경로
-                "imageLink": string,             // 이미지 링크
-                "width": int,                    // 이미지 넓이 비율 값
-                "height": int,                   // 이미지 높이 비율 값
-                "set": int                       // 이미지 일 때, 미사용 : 0/ 높이에 맞추기 : 1 / 넓이에 맞추기 : 2 / 프레임에 맞추기 : 3
-            }
-                ("type" = 2)
-            "videoOBJ": {                        // 비디오 정보
-                "videoURL": string,              // 비디오 경로
-                "width": int,                    // 동영상 넓이 비율 값
-                "height": int,                   // 동영상 높이 비율 값
-                "set": int                       // 미사용 : 0 / 높이에 맞추기 : 1 / 넓이에 맞추기 : 2 / 프레임에 맞추기 : 3
-            }
-                ("type" = 3)
-            "productList": [                    
+        "cardList": [
+                "card": {
+                "id": int,
+                "name": string,
+                "frameID": int
+            },
+            "category": {
+                "id": string,
+                "name": int
+            },
+            "component1": [
+                    ("type" = 1)
                 {
-                    "itemURL": string,              // 아이템 이미지 경로
-                    "itemLink": string,             // 아이템 링크
-                    "itemName": string,             // 상품 명
-                    "itemID": string                // 상품 가격
-                },
-                ... 반복
-            ]
-                ("type" = 4)
-            "contentList": [
+                    "type": int,                    // 컴포넌트 1 의 타입 값 - 미 사용 : 0 / 텍스트 메세지 : 1 / 프로필타입1 : 2
+                    "txtOBJ": {
+                        "txt": string,              // 텍스트
+                        "align": int,               // 정렬 - 미사용 : 0 / 좌측정렬 : 1 / 우측정렬 : 2 / 가운데정렬 : 3
+                        "color": string,            // RGB코드
+                        "size": int                 // 크기(pt)
+                    }
+                }
+                    ("type" = 2)
                 {
-                    "imageURL": string,             // 컨텐츠 이미지 경로
-                    "imageLink": string,            // 컨텐츠 링크
-                    "title": string,                // 제목
-                    "nickName": string              // 닉네임
-                },
-                ... 반복
-            ]
-                ("type" = 5)
-            "recommendList": [
+                    "profileOBJ": {
+                        "profileImage": string,     // 이미지 URL
+                        "nickName": string,         // 닉네임
+                        "accountID": string         // 아이디
+                    }
+                }
+            ],                              
+            "component2": [
+                    ("type" = 1)
                 {
-                    "profileURL": string         // 컨텐츠 이미지 경로
-                    "userID": int,               // 유저 아이디
-                    "nickName": string,          // 유저 닉네임
-                    "follow": int                // 팔로워 상태 (follow : 1 / etc : 0)
-                },
-                ... 반복
-            ]
+                    "type": int,                    // 컴포넌트 2 의 타입 값 - 미 사용 : 0 / 코인 정보 : 1 / 뱃지 출력 (hot : 3 / new : 4 / sale : 5)
+                    "timeOBJ": {                    // 시간 정보
+                        "time": string              // 시간 
+                    }
+                }
+                    ("type" = 2)
+                {
+                    "coinOBJ": {                    // 코인정보
+                        "coinImg": string,          // 코인 이미지 URL
+                        "coinCnt": string           // 코인 값 string
+                    }
+                }
+                    ("type" = 3)
+                {
+                    "badgeOBJ": {                   // 뱃지 정보
+                        "hot": int                  // 미사용 : 0 사용 : 1
+                    }
+                }
+                    ("type" = 4)
+                {
+                    "badgeOBJ": {
+                        "new": int
+                    }
+                }
+                    ("type" = 5)
+                {
+                    "badgeOBJ": {
+                        "sale": int
+                    }
+                }
+            ],                                
+            "component3": {
+                    ("type" = 1)
+                "type": int,                         // 컴포넌트 3 의 타입 값 - 미 사용 : 0 / 이미지 : 1 / 동영상 : 2 / 상품 : 3 / 갤러리 : 4 / 유저 : 5 
+                "imageOBJ": {                        // 이미지 정보
+                    "imageURL": string,              // 이미지 경로
+                    "imageLink": string,             // 이미지 링크
+                    "width": int,                    // 이미지 넓이 비율 값
+                    "height": int,                   // 이미지 높이 비율 값
+                    "set": int                       // 이미지 일 때, 미사용 : 0/ 높이에 맞추기 : 1 / 넓이에 맞추기 : 2 / 프레임에 맞추기 : 3
+                }
+                    ("type" = 2)
+                "videoOBJ": {                        // 비디오 정보
+                    "videoURL": string,              // 비디오 경로
+                    "width": int,                    // 동영상 넓이 비율 값
+                    "height": int,                   // 동영상 높이 비율 값
+                    "set": int                       // 미사용 : 0 / 높이에 맞추기 : 1 / 넓이에 맞추기 : 2 / 프레임에 맞추기 : 3
+                }
+                    ("type" = 3)
+                "productList": [                    
+                    {
+                        "itemURL": string,              // 아이템 이미지 경로
+                        "itemLink": string,             // 아이템 링크
+                        "itemName": string,             // 상품 명
+                        "itemID": string                // 상품 가격
+                    },
+                    ... 반복
+                ]
+                    ("type" = 4)
+                "contentList": [
+                    {
+                        "imageURL": string,             // 컨텐츠 이미지 경로
+                        "imageLink": string,            // 컨텐츠 링크
+                        "title": string,                // 제목
+                        "nickName": string              // 닉네임
+                    },
+                    ... 반복
+                ]
+                    ("type" = 5)
+                "recommendList": [
+                    {
+                        "profileURL": string         // 컨텐츠 이미지 경로
+                        "userID": int,               // 유저 아이디
+                        "nickName": string,          // 유저 닉네임
+                        "follow": int                // 팔로워 상태 (follow : 1 / etc : 0)
+                    },
+                    ... 반복
+                ]
 
-        },        
-       "component4": {
-            "type": int,                         // 컴포넌트 4의 타입 값 - 미 사용 : 0 / 사용 : 1
-            "profileOBJ": {
-                "profileImage": string,          // 이미지 URL
-                "nickName": string,              // 닉네임
-                "accountID": int                 // 아이디
+            },        
+        "component4": {
+                "type": int,                         // 컴포넌트 4의 타입 값 - 미 사용 : 0 / 사용 : 1
+                "profileOBJ": {
+                    "profileImage": string,          // 이미지 URL
+                    "nickName": string,              // 닉네임
+                    "accountID": int                 // 아이디
+                }
+            },                               
+        "component5": {                               // 컴포넌트 5의 타입 값 - 미 사용 : 0 / 1라인텍스트 : 1 / 2라인텍스트 : 2
+                    ("type" =1)
+                "type": int,
+                "txtOBJ1": {
+                    "txt": string,                       // 텍스트
+                    "size": int,                         // 폰트크기(pt)
+                    "color": string                      // RGB코드
+                }
+                    ("type" = 2)
+                "txtOBJ1": {
+                    "txt": string,
+                    "size": int,
+                    "color": string
+                },
+                "txtOBJ2": {
+                    "txt": string,                     // 텍스트
+                    "size": int,                       // 폰트크기(pt)
+                    "color": string                    // RGB코드
+                }
             }
-        },                               
-       "component5": {                               // 컴포넌트 5의 타입 값 - 미 사용 : 0 / 1라인텍스트 : 1 / 2라인텍스트 : 2
-                ("type" =1)
-            "type": int,
-            "txtOBJ1": {
-                "txt": string,                       // 텍스트
-                "size": int,                         // 폰트크기(pt)
-                "color": string                      // RGB코드
-            }
-                ("type" = 2)
-            "txtOBJ1": {
-                "txt": string,
-                "size": int,
-                "color": string
-            },
-            "txtOBJ2": {
-                "txt": string,                     // 텍스트
-                "size": int,                       // 폰트크기(pt)
-                "color": string                    // RGB코드
-            }
-        }
-       "component6": {
-                ("type" = 1)
-            "type": int,                        // 컴포넌트 6의 타입 값 - 미 사용 : 0 / 싱글커스텀 : 1 / 멀티커스텀 : 2
-            "align": int,                        // 정렬-미사용 : 0 / 좌측정렬 : 1 / 우측정렬 : 2 / 가운데정렬 : 3
-            "customType": int,                  // 미사용 : 0 / 인게임 이동 : 1 / 인웹페이지 이동 : 2 / 외부 페이지 이동 : 3 / 별점 : 4 / 커스텀버튼 : 5
-            ("customType" = 1,2,3)
-            "moreOBJ": {
-                "moreLink": string                  // more Detail 링크
-            }
-        }
         "component6": {
-                ("customType" = 4)
-            "starOBJ": {
-                "starSelect": int                // 선택한 별점 (0 ~ 5)
+                    ("type" = 1)
+                "type": int,                        // 컴포넌트 6의 타입 값 - 미 사용 : 0 / 싱글커스텀 : 1 / 멀티커스텀 : 2
+                "align": int,                        // 정렬-미사용 : 0 / 좌측정렬 : 1 / 우측정렬 : 2 / 가운데정렬 : 3
+                "customType": int,                  // 미사용 : 0 / 인게임 이동 : 1 / 인웹페이지 이동 : 2 / 외부 페이지 이동 : 3 / 별점 : 4 / 커스텀버튼 : 5
+                ("customType" = 1,2,3)
+                "moreOBJ": {
+                    "moreLink": string                  // more Detail 링크
+                }
             }
-        }
-        "component6": {
-                ("customType" = 5)
-            "buttonOBJ": {
-                "buttonList": [
-                    {
-                        "Label": string,         // 버튼 라벨
-                        "Count": int,            // 버튼 갯수
-                        "Selected": int          // 선택한 버튼 (선택 : 1 / else : 0)
-                    }
-                ]
-                ... 반복
+            "component6": {
+                    ("customType" = 4)
+                "starOBJ": {
+                    "starSelect": int                // 선택한 별점 (0 ~ 5)
+                }
             }
-        }
-        "component6": {
-                ("type" = 2)
-            "type": int,
-            "align": int,
-                ("customType" == 1,2,3)
-            "customType": int,
-            "moreOBJ": {
-                "moreLink": string
-            },
-                ("customType" == 4)
-            "starOBJ": {
-                "starSelect": int
-            },
-                ("customType" == 5)
-            "buttonOBJ": {
-                "buttonList": [
-                    {
-                        "label": string,
-                        "count": int,
-                        "selected": int
-                    }
-                ]
-            },
-            "commonOBJ": {                      // 아래 항목중 노출 표시가 안된것은 노출하지 않는다.
-                "liked": int,                    // 좋아요 선택 : 1, 미 선택 : 0 
-                "likedCount": int,               // 좋아요 갯수 
-                "threadCount": int,              // thread 갯수 
-                "commentCount": int,             // 댓글 갯수 
-                "shared": int                    // 공유버튼 노출 1, 미 노출 : 0
-        }
-   }
-}
+            "component6": {
+                    ("customType" = 5)
+                "buttonOBJ": {
+                    "buttonList": [
+                        {
+                            "Label": string,         // 버튼 라벨
+                            "Count": int,            // 버튼 갯수
+                            "Selected": int          // 선택한 버튼 (선택 : 1 / else : 0)
+                        }
+                    ]
+                    ... 반복
+                }
+            }
+            "component6": {
+                    ("type" = 2)
+                "type": int,
+                "align": int,
+                    ("customType" == 1,2,3)
+                "customType": int,
+                "moreOBJ": {
+                    "moreLink": string
+                },
+                    ("customType" == 4)
+                "starOBJ": {
+                    "starSelect": int
+                },
+                    ("customType" == 5)
+                "buttonOBJ": {
+                    "buttonList": [
+                        {
+                            "label": string,
+                            "count": int,
+                            "selected": int
+                        }
+                    ]
+                    ... 반복
+                },
+                "commonOBJ": {                      // 아래 항목중 노출 표시가 안된것은 노출하지 않는다.
+                    "liked": int,                    // 좋아요 선택 : 1, 미 선택 : 0 
+                    "likedCount": int,               // 좋아요 갯수 
+                    "threadCount": int,              // thread 갯수 
+                    "commentCount": int,             // 댓글 갯수 
+                    "shared": int                    // 공유버튼 노출 1, 미 노출 : 0
+                }
+            }
+        ]
+        ... 반복
+    }
 
     //실패
     {
