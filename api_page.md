@@ -84,11 +84,10 @@
 
 ### 1. 회원가입 [/ada/account/join] / POST <a id="/ada/account/join" href="#/ada/account/join">¶</a>
 
-*info*
-
-    기능 : ADA 회원가입
-    수정예정 : 입력 파라미터가 추가 될 수 있음. 출력 결과 값의 개인정보 노출 부분이 변경 될 수 있음.
-    확인사항 : signup_id 값 중복 불가.
+* info
+    + 기능 : ADA 회원가입
+    + 수정예정 : 입력 파라미터가 추가 될 수 있음. 출력 결과 값의 개인정보 노출 부분이 변경 될 수 있음.
+    + 확인사항 : signup_id 값 중복 불가.
 
 
 *parameter*
