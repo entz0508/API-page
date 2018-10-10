@@ -1426,9 +1426,9 @@
     0 : 성공　
     ? : 정리중
 
-##Card <a id="Card" href="#Card">¶</a>
+## Card <a id="Card" href="#Card">¶</a>
 
-###1. 프레임 리스트 [/ada/card/frameList] / POST <a id="/ada/card/frameList" href="#/ada/card/frameList">¶</a>
+### 1. 프레임 리스트 [/ada/card/frameList] / POST <a id="/ada/card/frameList" href="#/ada/card/frameList">¶</a>
 
 *info*
 
@@ -1504,7 +1504,7 @@
 
 
 
-###2. 카드 리스트 [/ada/card/cardList] / POST <a id="/ada/card/cardList" href="#/ada/card/cardList">¶</a>
+### 2. 카드 리스트 [/ada/card/cardList] / POST <a id="/ada/card/cardList" href="#/ada/card/cardList">¶</a>
 
 *info*
 
@@ -1708,7 +1708,7 @@
 
 
 
-###3. 좋아요 처리 [/ada/card/like] / POST <a id="/ada/card/like" href="#/ada/card/like">¶</a>
+### 3. 좋아요 처리 [/ada/card/like] / POST <a id="/ada/card/like" href="#/ada/card/like">¶</a>
 
 *info*
 
@@ -1751,7 +1751,7 @@
     ? : 정리중
 
 
-###4. 별점 처리 [/ada/card/star] / POST <a id="/ada/card/star" href="#/ada/card/star">¶</a>
+### 4. 별점 처리 [/ada/card/star] / POST <a id="/ada/card/star" href="#/ada/card/star">¶</a>
 
 *info*
 
@@ -1792,7 +1792,7 @@
     0 : 성공　
     ? : 정리중
 
-###5. 버튼 처리 [/ada/card/button] / POST <a id="/ada/card/button" href="#/ada/card/button">¶</a>
+### 5. 버튼 처리 [/ada/card/button] / POST <a id="/ada/card/button" href="#/ada/card/button">¶</a>
 
 *info*
 
