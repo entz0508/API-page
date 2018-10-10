@@ -1480,7 +1480,7 @@
                     "size2": int            // 크기(pt)
                 },
                 "component6": {             // 컴포넌트 6
-                    "type": int,            // 컴포넌트 6의 타입 값 - 미사용 : 0 / one 커스텀 : 1 / multi 커스텀 : 2
+                    "type": int,            // 컴포넌트 6의 타입 값 - 미 사용 : 0 / more detail : 1 / custom button : 2 / star point : 3 / multi custom : 4
                     "align": int            // 정렬-미사용 : 0 / 좌측정렬 : 1/우측정렬 : 2 / 가운데정렬 : 3
                 },
                 "description": string       // 프레임 설명
