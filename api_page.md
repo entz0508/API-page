@@ -1655,21 +1655,14 @@
                             "color": string                    // RGB코드
                         }
                     }
-                (case "component6.type" = 1)              
                 "component6": {
-                        "type": int,                        // 컴포넌트 6의 타입 값 - 미 사용 : 0 / 싱글커스텀 : 1 / 멀티커스텀 : 2
+                        "type": int,                        // 컴포넌트 6의 타입 값 - 미 사용 : 0 / more detail : 1 / custom button : 2 / star point : 3 / multi custom : 4
                         "align": int,                        // 정렬-미사용 : 0 / 좌측정렬 : 1 / 우측정렬 : 2 / 가운데정렬 : 3
-                        (case "type" = 1 or "type" = 2)
-                        "customType": int,                  // 미사용 : 0 / 인게임 이동 : 1 / 인웹페이지 이동 : 2 / 외부 페이지 이동 : 3 / 별점 : 4 / 커스텀버튼 : 5
-                        (case "customType" = 1,2,3)
+                        (case "component6.type" = 1)
                         "moreOBJ": {
                             "moreLink": string                  // more Detail 링크
                         }
-                        (case "customType" = 4)
-                        "starOBJ": {
-                            "starSelect": int                // 선택한 별점 (0 ~ 5)
-                        }
-                        (case "customType" = 5)
+						(case "component6.type" = 2)
                         "buttonOBJ": {
                             "buttonList": [
                                 {
@@ -1680,11 +1673,18 @@
                             ]
                             ... 반복
                         }
-                        (case "type" = 2)
+                        (case "component6.type" = 3)
+                        "starOBJ": {
+                            "starSelect": int                // 선택한 별점 (0 ~ 5)
+                        }
+
+						(case "component6.type" = 4)
                         "commonOBJ": {                      // 아래 항목중 노출 표시가 안된것은 노출하지 않는다.
                             "liked": int,                    // 좋아요 선택 : 1, 미 선택 : 0 
-                            "likedCount": int,               // 좋아요 갯수 
+                            "likedCount": int,               // 좋아요 갯수
+                            "thread" int,                    // thread 선택 : 1, 미 선택 : 0
                             "threadCount": int,              // thread 갯수 
+                            "comment": int,                  // 댓글 선택 : 1, 미 선택 : 0
                             "commentCount": int,             // 댓글 갯수 
                             "shared": int                    // 공유버튼 노출 1, 미 노출 : 0
                         }
@@ -1705,6 +1705,7 @@
 
     0 : 성공　
     ? : 정리중
+
 
 
 ###3. 좋아요 처리 [/ada/card/like] / POST <a id="/ada/card/like" href="#/ada/card/like">¶</a>
