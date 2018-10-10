@@ -1680,13 +1680,13 @@
 
 						(case "component6.type" = 4)
                         "commonOBJ": {                      // 아래 항목중 노출 표시가 안된것은 노출하지 않는다.
-                            "liked": int,                    // 좋아요 선택 : 1, 미 선택 : 0 
+                            "liked": int,                    // 좋아요 - 선택 : 1, 미 선택 : 0 
                             "likedCount": int,               // 좋아요 갯수
-                            "thread" int,                    // thread 선택 : 1, 미 선택 : 0
+                            "thread" int,                    // thread - 선택 : 1, 미 선택 : 0
                             "threadCount": int,              // thread 갯수 
-                            "comment": int,                  // 댓글 선택 : 1, 미 선택 : 0
+                            "comment": int,                  // 댓글 - 선택 : 1, 미 선택 : 0
                             "commentCount": int,             // 댓글 갯수 
-                            "shared": int                    // 공유버튼 노출 1, 미 노출 : 0
+                            "shared": int                    // 공유버튼 - 노출 1, 미 노출 : 0
                         }
                     }
                 },
