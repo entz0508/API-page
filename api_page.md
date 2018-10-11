@@ -1541,10 +1541,7 @@
                         "type": int,                    // 컴포넌트 1 의 타입 값 - 미 사용 : 0 / 텍스트 메세지 : 1 / 프로필타입1 : 2
                         (case "type" = 1)
                         "txtOBJ": {
-                            "txt": string,              // 텍스트
-                            "align": int,               // 정렬 - 미사용 : 0 / 좌측정렬 : 1 / 우측정렬 : 2 / 가운데정렬 : 3
-                            "color": string,            // RGB코드
-                            "size": int                 // 크기(pt)
+                            "txt": string              // 텍스트
                         }
                         (case "type" = 2)
                         {
@@ -1586,17 +1583,11 @@
                         (case "type" = 1)
                         "imageOBJ": {                        // 이미지 정보
                             "imageURL": string,              // 이미지 경로
-                            "imageLink": string,             // 이미지 링크
-                            "width": int,                    // 이미지 넓이 비율 값
-                            "height": int,                   // 이미지 높이 비율 값
-                            "set": int                       // 이미지 일 때, 미사용 : 0/ 높이에 맞추기 : 1 / 넓이에 맞추기 : 2 / 프레임에 맞추기 : 3
+                            "imageLink": string             // 이미지 링크
                         }
                         (case "type" = 2)
                         "videoOBJ": {                        // 비디오 정보
-                            "videoURL": string,              // 비디오 경로
-                            "width": int,                    // 동영상 넓이 비율 값
-                            "height": int,                   // 동영상 높이 비율 값
-                            "set": int                       // 미사용 : 0 / 높이에 맞추기 : 1 / 넓이에 맞추기 : 2 / 프레임에 맞추기 : 3
+                            "videoURL": string              // 비디오 경로
                         }
                         (case "type" = 3)
                         "productList": [                    
@@ -1644,15 +1635,11 @@
                         "type": int,
                         (case "type" = 1 or "type" = 2)
                         "txtOBJ1": {
-                            "txt": string,                       // 텍스트
-                            "size": int,                         // 폰트크기(pt)
-                            "color": string                      // RGB코드
+                            "txt": string                       // 텍스트
                         }
                         (case "type" = 2)
                         "txtOBJ2": {
-                            "txt": string,                     // 텍스트
-                            "size": int,                       // 폰트크기(pt)
-                            "color": string                    // RGB코드
+                            "txt": string                     // 텍스트
                         }
                     }
                 "component6": {
