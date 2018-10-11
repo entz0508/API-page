@@ -1536,9 +1536,8 @@
                         "id": string,
                         "name": int
                     },
-                    (case "component1.type" = 1)
+                    (case "component1.type" = 1)        // 컴포넌트 1 의 타입 값 - 미 사용 : 0 / 텍스트 메세지 : 1 / 프로필타입1 : 2
                     "component1": {
-                        "type": int,                    // 컴포넌트 1 의 타입 값 - 미 사용 : 0 / 텍스트 메세지 : 1 / 프로필타입1 : 2
                         (case "type" = 1)
                         "txtOBJ": {
                             "txt": string              // 텍스트
@@ -1552,9 +1551,8 @@
                             }
                         }
                     },
-                    (case "component2.type" = 1)
-                    "component2": {
-                        "type": int,                    // 컴포넌트 2 의 타입 값 - 미 사용 : 0 / 코인 정보 : 1 / 뱃지 출력 (hot : 3 / new : 4 / sale : 5)
+                    (case "component2.type" = 1)        // 컴포넌트 2 의 타입 값 - 미 사용 : 0 / 코인 정보 : 1 / 뱃지 출력 (hot : 3 / new : 4 / sale : 5)
+                    "component2": {                    
                         (case "type" = 1)
                         "timeOBJ": {                    // 시간 정보
                             "time": string              // 시간 
@@ -1577,9 +1575,8 @@
                             "sale": int
                         }
                     },
-                    (case "component3.type" = 1)
+                    (case "component3.type" = 1)             // 컴포넌트 3 의 타입 값 - 미 사용 : 0 / 이미지 : 1 / 동영상 : 2 / 상품 : 3 / 갤러리 : 4 / 유저 : 5 
                     "component3": {
-                        "type": int,                         // 컴포넌트 3 의 타입 값 - 미 사용 : 0 / 이미지 : 1 / 동영상 : 2 / 상품 : 3 / 갤러리 : 4 / 유저 : 5 
                         (case "type" = 1)
                         "imageOBJ": {                        // 이미지 정보
                             "imageURL": string,              // 이미지 경로
@@ -1621,33 +1618,30 @@
                         ]
 
                     },     
-                (case "component4.type" = 1)
+                (case "component4.type" = 1)                 // 컴포넌트 4의 타입 값 - 미 사용 : 0 / 사용 : 1
                 "component4": {
-                        "type": int,                         // 컴포넌트 4의 타입 값 - 미 사용 : 0 / 사용 : 1
                         "profileOBJ": {
                             "profileImage": string,          // 이미지 URL
                             "nickName": string,              // 닉네임
                             "accountID": int                 // 아이디
                         }
                     },                 
-                (case "component5.type" = 1)              
-                "component5": {                               // 컴포넌트 5의 타입 값 - 미 사용 : 0 / 1라인텍스트 : 1 / 2라인텍스트 : 2
-                        "type": int,
+                (case "component5.type" = 1)                 // 컴포넌트 5의 타입 값 - 미 사용 : 0 / 1라인텍스트 : 1 / 2라인텍스트 : 2
+                "component5": {                               
                         (case "type" = 1 or "type" = 2)
                         "txtOBJ1": {
-                            "txt": string                       // 텍스트
+                            "txt": string                    // 텍스트
                         }
                         (case "type" = 2)
-                        "txtOBJ2": {
-                            "txt": string                     // 텍스트
+                        "txtOBJ2": {1
+                            "txt": string                    // 텍스트
                         }
                     }
                 "component6": {
-                        "type": int,                        // 컴포넌트 6의 타입 값 - 미 사용 : 0 / more detail : 1 / custom button : 2 / star point : 3 / multi custom : 4
                         "align": int,                        // 정렬-미사용 : 0 / 좌측정렬 : 1 / 우측정렬 : 2 / 가운데정렬 : 3
-                        (case "component6.type" = 1)
+                        (case "component6.type" = 1)         // 컴포넌트 6의 타입 값 - 미 사용 : 0 / more detail : 1 / custom button : 2 / star point : 3 / multi custom : 4
                         "moreOBJ": {
-                            "moreLink": string                  // more Detail 링크
+                            "moreLink": string               // more Detail 링크
                         }
 						(case "component6.type" = 2)
                         "buttonOBJ": {
@@ -1666,7 +1660,7 @@
                         }
 
 						(case "component6.type" = 4)
-                        "commonOBJ": {                      // 아래 항목중 노출 표시가 안된것은 노출하지 않는다.
+                        "commonOBJ": {                       // 아래 항목중 노출 표시가 안된것은 노출하지 않는다.
                             "liked": int,                    // 좋아요 선택 : 1, 미 선택 : 0 
                             "likedCount": int,               // 좋아요 갯수
                             "thread" int,                    // thread 선택 : 1, 미 선택 : 0
