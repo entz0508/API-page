@@ -1516,7 +1516,6 @@
     client_uid : string                     // 필수, 디바이스 UID
     os : string                             // 필수, OS : enum(ios/android/web)
     access_token : string                   // 필수  access token
-    
 
 *return value*
 
@@ -1592,7 +1591,8 @@
                                 "itemURL": string,              // 아이템 이미지 경로
                                 "itemLink": string,             // 아이템 링크
                                 "itemName": string,             // 상품 명
-                                "itemID": string                // 상품 가격
+                                "itemID": int,                  // 상품 ID
+                                "price": int                    // 상품 가격
                             },
                             ... 반복
                         ]
@@ -1603,6 +1603,7 @@
                                 "imageLink": string,            // 컨텐츠 링크
                                 "title": string,                // 제목
                                 "nickName": string              // 닉네임
+                                "contentID": int                // 컨텐츠 ID
                             },
                             ... 반복
                         ]
@@ -1661,11 +1662,12 @@
 
 						(case "component6.type" = 4)
                         "commonOBJ": {                       // 아래 항목중 노출 표시가 안된것은 노출하지 않는다.
-                            "liked": int,                    // 좋아요 선택 : 1, 미 선택 : 0 
+                            "liked": int,                    // 좋아요 노출 : 1, 미 노출 : 0 
                             "likedCount": int,               // 좋아요 갯수
-                            "thread" int,                    // thread 선택 : 1, 미 선택 : 0
+                            "likedCheck": int,              // 좋아요 선택 여부 - 선택 : !0, 미 선택 : 0
+                            "thread" int,                    // thread 노출 : 1, 미 노출 : 0
                             "threadCount": int,              // thread 갯수 
-                            "comment": int,                  // 댓글 선택 : 1, 미 선택 : 0
+                            "comment": int,                  // 댓글 노출 : 1, 미 노출 : 0
                             "commentCount": int,             // 댓글 갯수 
                             "shared": int                    // 공유버튼 노출 1, 미 노출 : 0
                         }
@@ -1686,7 +1688,6 @@
 
     0 : 성공　
     ? : 정리중
-
 
 
 ### 3. 좋아요 처리 [/ada/card/like] / POST <a id="/ada/card/like" href="#/ada/card/like">¶</a>
