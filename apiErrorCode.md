@@ -1,6 +1,7 @@
 
-##ERROR CODE <a id="error" href="#error">¶</a>
-###[에러코드정의] <a id="errorCode" href="#errorCode">¶</a>
+## ERROR CODE <a id="error" href="#error">¶
+
+### [에러코드정의] <a id="errorCode" href="#errorCode">¶
     // 일반
     '0'                         // 성공 , 에러없음
     '-1'                        // DB 결과 값 에러
