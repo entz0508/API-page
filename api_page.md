@@ -64,12 +64,18 @@
 1. 옷장 리스트 - [/ada/wardrobe/list](#/ada/wardrobe/list) - 상위 구매리스트와 상동.
 2. 아이템 착용 / 해제 - [/ada/wardrobe/wear](#/ada/wardrobe/wear) - 추후 작업 예정 - 1
 
-### [Card](#Card) -- API Mockup
-1. 프레임 리스트 - [/ada/card/frameList](#/ada/card/frameList) - POST, 작업 중
-2. 카드 리스트 - [/ada/card/cardList](#/ada/card/cardList) - POST, 작업 중
-3. 좋아요 - [/ada/card/like](#/ada/card/like) - POST, 작업 중
-4. 별점 - [/ada/card/star](#/ada/card/star) - POST, 작업 중
-5. 버튼 - [/ada/card/button](#/ada/card/button) - POST, 작업 중
+### [Card](#Card)
+1. 프레임 리스트 - [/ada/card/frameList](#/ada/card/frameList) - POST, 작업 완료
+2. 카드 리스트 - [/ada/card/cardList](#/ada/card/cardList) - POST, 작업 완료
+3. 좋아요 - [/ada/card/like](#/ada/card/like) - POST, 작업 완료
+4. 별점 - [/ada/card/star](#/ada/card/star) - POST, 작업 완료
+5. 버튼 - [/ada/card/button](#/ada/card/button) - POST, 작업 완료
+
+### [StyleCard](#StyleCard) -- API Mockup
+1. 취향 평가 - [/ada/style/rateStyle](#/ada/style/rateStyle) - POST, 작업 완료
+2. 취향평가 카드 리스트 - [/ada/style/list](#/ada/style/list) - POST, 작업 완료
+3. 취향평가 상세보기 - [/ada/style/detailView](#/ada/style/detailView) - POST, 작업 완료
+4. 상세보기 그래프 = [/ada/style/graphView](#/ada/style/graphView) - POST, 작업 예정
 
 ### [ETC](#Etc)
 1. api서버 통신테스트 - [/ada/etc/test](#/ada/etc/test) - POST ,완료.
@@ -1822,6 +1828,273 @@
 
     0 : 성공　
     ? : 정리중
+## StyleCard <a id="StyleCard" href="#StyleCard">¶</a>
+
+### 1. 취향 평가 [/ada/style/rateStyle] / POST <a id="/ada/style/rateStyle" href="#/ada/style/rateStyle">¶</a>
+
+*info*
+
+    기능 : Style Like 에서 취향을 평가 후 등록.
+    수정예정 : API의 형식이 변경 될 수 있음, 파라미터 명이 변경 될 수 있음.
+
+*parameter*
+
+        client_uid : string                  	// 필수, 디바이스 UID
+	   os : string                             	// 필수, OS : enum(ios/android/web)
+	   access_token : string                   	// 필수  access token
+	   - 이하 contents var -
+       con_type : int                           // contents type 
+	   con_id : int                             // contents ID
+	   user_point : int                         // like n (0 ~ 10)
+
+
+*return value*
+
+    // 성공
+    {
+        "res": 0,
+        "msg": "정상적으로 처리되었습니다.",
+        "data": {
+            "pointCount": 1                     // 취향 평가 한 횟수 (0 or 1)
+        }
+    }
+
+    //실패
+    {
+        "res": int,						// 0 이 아닌 값,
+		"msg": string.					// 오류 메세지
+		"data": null
+    }
+
+*res*
+
+    0 : 성공　
+    ? : 정리중
+
+
+### 2. 취향평가 카드 리스트 [/ada/style/list] / POST <a id="/ada/style/list" href="#/ada/style/list">¶</a>
+
+*info*
+
+    기능 : 평가 할 스타일 카드 리스트를 읽기.
+    수정예정 : API의 형식이 변경 될 수 있음, 파라미터 명이 변경 될 수 있음.
+
+*parameter*
+
+    client_uid : string                  					// 필수, 디바이스 UID
+    os : string                             					// 필수, OS : enum(ios/android/web)
+    access_token : string                   					// 필수  access token
+    - 이하 contents var -				
+    set_id : int                           					// stylelike 호출 세트 정보 - 스타터 세트 1,스탠다드세트 2,캠페인세트 3
+    campaign_id : int										// 켐페인세트의 경우 캠페인아이디
+    page_val : int                  							// API 최초 호출 시 0 으로 입력 되어야 함. 이 후 1씩 증가
+
+*return value*
+
+    // 성공
+    {
+        "res": 0,
+        "msg": "search success",
+        "data" : {
+            "styleLikeList" : [
+                {
+                    "stylelikeID" : int,					// 스타일라이크 ID
+                    "profileID" : int,						// 카드소유자정보 - AccountID
+                    "profileImage" : string,				// 카드소유자정보 - 프로필이미지 (오피셜계정, 개인유져)
+                    "profileName" : string,					// 카드소유자정보 - 닉네임
+                    "setID": int,							// 세트ID - 스타터 세트 1,스탠다드세트 2,캠페인세트 3
+                    "contentType" : int,					// 컨텐츠 타입 - lookitem 1, userpost 2, item_tb 3
+                    (case "contentType" = 1)		        //// 컨텐츠 타입 - lookitem 1
+                    "attachPath": string,			        // 카드이미지 ("http://35.194.222.5/fit/F_PRD_ONE_18PFGZ001_01.png")
+                    "contentID": int			            // lookitemID
+                    "contentInfo" : {}
+
+                        ...
+                    (case "contentType" = 2)			    // 컨텐츠 타입 - userpost 2
+                    "attachPath": string,			        // 컨텐츠이미지 ("http://35.194.222.5/fit/F_PRD_ONE_18PFGZ001_01.png")
+                    "contentID" : int				        // userpostID
+                    "contentInfo" : {}
+
+                        ...
+                    (case "contentType" = 3)			    // 컨텐츠 타입 - item 3
+                    "attachPath": string,			        // 아이템이미지 ("http://35.194.222.5/fit/F_PRD_ONE_18PFGZ001_01.png")
+                    "contentID": int,                       // 아이템ID
+                    "contentInfo" : {
+                        "itemName": string,             // 상품명("Item Name 497")
+                    }                
+                },
+                ...반복
+            ]
+        }		
+    }
+    // 실패
+    {
+        "res": int,                        	// 0 이 아닌 값, 오류코드
+        "msg": string.                  	// 오류 메세지
+        "data": null
+    }
+
+*res*
+
+    0 : 성공　
+    ? : 정리중
+
+### 3. 취향평가 상세보기 [/ada/style/detailView] / POST <a id="/ada/style/detailView" href="#/ada/style/detailView">¶</a>
+
+*info*
+
+    기능 : 스타일 카드 상세보기
+    수정예정 : API의 형식이 변경 될 수 있음, 파라미터 명이 변경 될 수 있음.
+     content_type은 아래 설명한것과 같이 통일한다.
+     content TYPE - 1 아이템/2 상품(부티크)/3 시즌룩/4 커스텀룩
+     아이템을 등록하고, 부띠끄에서 상품은 아이템을 참고하여 별도로 등록되기에 아이템(제품자체)과 상품(가격포함)을 분리하여 설계하였다.
+     content_type별 content_id는 아래 테이블에서 참고한다. content_type은 추후 계속 늘어날수 있다.
+     - 상품ID(sales_tb), 아이템ID(item_tb), 시즌룩ID(looks_tb), 커스텀룩ID(userpost_tb) 
+     부띠끄의 상품의 content_type 은 기존에 정의 되지 않았지만 content_type = 2 다.
+
+*parameter*
+
+    client_uid : string                 // 필수, 디바이스 UID
+    os : string                         // 필수, OS : enum(ios/android/web)
+    access_token : string               // 선택 - 토큰이 없을경우 null, access token
+    - 이하 contents var -
+    - sales_id : int                    // 해당 상품의 ID > 삭제
+    content_type : int                  // content TYPE - 1 아이템/2 상품(부티크)/3 시즌룩/4 커스텀룩
+    content_id : int                    // content ID - 해당 컨텐츠 ID
+				
+    
+*return value*
+
+    // 성공
+    {
+    "res": 0,
+    "msg": "search success",
+    "data": {
+        // 통합 상세
+        "contentDetail": {
+            "contentType": int,                                 // 1 아이템/2 상품(부티크)/3 시즌룩/4 커스텀룩
+            "contentID": int,                                   // 상품ID(sales_tb), 아이템ID(item_tb), 시즌룩ID(looks_tb), 커스텀룩ID(userpost_tb)
+            "contentName": string,                              // 상품명(부띠끄상세), 아이템명(상품상세), 시즌룩넘버(시즌룩상세), 커스텀룩일 때 null
+            "userInfo": {
+                "accountID": int,                               // 사용자계정 ID(커스텀룩상세)
+                "nickName": string                              // 닉네임(커스텀룩상세)
+                "profileImage": string,                         // 이미지 URL
+            },
+            "brandInfo": {
+                "brandID": int,                                   // 브랜드아이디(부티끄상세, 상품상세, 시즌룩상세)
+                "brandName": string,                              // 브랜드명(부티끄상세, 상품상세, 시즌룩상세)
+                "officialName": string                            // 오피셜명(부티끄상세, 상품상세, 시즌룩상세)
+                "brandImage": string,                             // 브랜드 이미지(부티끄상세, 상품상세, 시즌룩상세)
+            },
+            "description": string,                                // 상품설명, 아이템설명, 시즌룩설명, 커스텀룩설명
+            "buyInfo": {
+                "payMethod": int,                                   // 판매타입
+                "price": int,                                     // 가격
+                "discountRatio": int                              // 할인률(0보다 크면 할인상태)
+            }
+            "scrapStat": int,                                 // 스크랩 유무 1: 스크랩, 0 etc
+            "userPoint": int,                                  // user stylelike point
+            "commentCount": int                                  // 커맨트 카운트
+            "regDate": datetime                               // 등록일시
+        },
+        
+        
+        // 상품옵션 목록(주석, 상품옵션은 추후 사용하지 않음으로 인해 주석처리예정)
+        /*
+        "subOption": [
+            {
+                "subitemID": int,                             // 상품옵션코드
+                "colorID": int,                               // 색생ID
+                "codeName": string,                               // 색상명
+                "codeValue": string,                          // RGB코드
+                "codeImage": string,                          // 샘플이미지 경로(준비안됨)
+                "attachList": [   
+                    {   
+                        "attachType": int,                    // 색상 기본이미지 0, 그외 1
+                        "attachPath": string                  // 상세 이미지
+                    },
+                    ...
+                ]
+            },
+            ... 아이템 옵션 리스트 반복
+        ],
+        */
+        
+        // 이미지 목록
+        "attachList": [
+            {
+                "attachType": int,                            // 메인이미지 1, 그밖에 0
+                "attachPath": string                          // 시즌룩이미지 / 커스텀룩이미지
+            },
+            ... 이미지 리스트 반복
+        ],
+        
+        // 태그목록(부띠끄상세,아이템상세)
+        "tagList": [
+            {
+                "tagType": int,                                   // tag 타입
+                "tagValue": int,                                  // tag 값
+                "tagName": string                             // tag 이름
+            },
+            ... 태그 리스트 반복
+        ],
+        
+        // 관련 상품(시즌룩 or 커스텀룩일경우에만 등록된 관련 ITEM 목록 출력)
+        "relatedList": [
+            {
+                "itemID": int,                                    // 아이템ID
+                "itemName": string,                               // 아이템명
+                "brandName": string,                          // 브랜드명
+                "attachPath": string                          // 상품이미지
+            },
+            ... 아이템 리스트 반복
+        ],
+        
+        "ratingInfo": {
+                "rate1": int,                                 // 1점대 카운트
+                "rate2": int,                                 // 2점대 카운트
+                "rate3": int,                                 // 3점대 카운트
+                "rate4": int,                                 // 4점대 카운트
+                "rate5": int,                                 // 5점대 카운트
+                "rateCount": int,                                 // ratingCount 전체 개수
+                "rateTotal": int                                  // ratingTotal 합계 점수
+        },              
+        "commentList": [              
+            {   "commentType": int,                            // 1 본인, 2 topRank        
+                "commentID": int,                             // comment ID
+                "category": int,                               // 0 일반, 1 리뷰
+                "comment": string,                                // comment(max-length 1000)
+                "profileOBJ": {               
+                    "profileImage": string,                   // 이미지 URL
+                    "nickName": string,                       // 닉네임
+                    "accountID": string,                      // 아이디
+                    "userPoint": int                          // 사용자 평점
+                },
+                "likeCount": int,                                 // 댓글 공감수
+                "dislikeCount": int,                              // 댓글 비공감수
+                "threadCount": int,                               // 대댓글수
+                "regDate": datetime                               // 등록일시
+            },
+            ... 커맨트 리스트 반복
+        ]
+        
+    }
+}
+
+    //실패
+    {
+        "res": int,                                                   // 0 이 아닌 값,
+        "msg": string                                             // 오류 메세지
+        "data": null
+    }
+
+*res*
+
+    0 : 성공　
+    ? : 정리중    
+    
+    
+    
 ## Etc <a id="etc" href="#etc">¶</a>
 
 
